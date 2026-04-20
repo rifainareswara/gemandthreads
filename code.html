@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#1c1b1a",
+                    "surface-container-low": "#f7f3f0",
+                    "on-tertiary-fixed-variant": "#623d3a",
+                    "on-tertiary-fixed": "#2f1311",
+                    "on-surface": "#1c1b1a",
+                    "secondary-fixed": "#d5e9bf",
+                    "on-secondary-container": "#576846",
+                    "inverse-primary": "#f3b8b0",
+                    "surface-variant": "#e5e2df",
+                    "tertiary-fixed": "#ffdad6",
+                    "on-primary-fixed": "#32120e",
+                    "primary-container": "#e2a9a1",
+                    "surface-container-high": "#ebe7e4",
+                    "on-primary-fixed-variant": "#653c36",
+                    "secondary-fixed-dim": "#b9cda4",
+                    "on-secondary-fixed-variant": "#3b4c2c",
+                    "tertiary": "#7c5450",
+                    "surface-tint": "#80534c",
+                    "primary-fixed-dim": "#f3b8b0",
+                    "surface-bright": "#fdf9f6",
+                    "outline": "#837371",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#ffdad5",
+                    "surface": "#fdf9f6",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#526442",
+                    "on-primary-container": "#663d37",
+                    "tertiary-container": "#ddaba6",
+                    "outline-variant": "#d5c2bf",
+                    "background": "#fdf9f6",
+                    "primary": "#80534c",
+                    "inverse-on-surface": "#f4f0ed",
+                    "on-surface-variant": "#514442",
+                    "surface-dim": "#ddd9d6",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#eebab5",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#111f05",
+                    "surface-container": "#f1edea",
+                    "surface-container-highest": "#e5e2df",
+                    "secondary-container": "#d2e6bc",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#31302f",
+                    "on-tertiary-container": "#633e3b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+        }
+        .crochet-overlay {
+            background-image: radial-gradient(#80534c 0.5px, transparent 0.5px);
+            background-size: 16px 16px;
+            opacity: 0.03;
+        }
+        .signature-gradient:hover {
+            background: linear-gradient(135deg, #80534c 0%, #e2a9a1 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center h-16 bg-white/70 backdrop-blur-xl rounded-full mt-4 mx-auto max-w-7xl px-6 shadow-[0px_12px_32px_rgba(128,83,76,0.08)]">
+<div class="text-2xl font-serif tracking-tight text-[#80534c]">Gem &amp; Threads</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#80534c] font-semibold border-b-2 border-[#f3b8b0] pb-1 font-label text-xs tracking-[0.05em] uppercase" href="#">Shop</a>
+<a class="text-stone-500 font-medium hover:text-[#80534c] transition-colors duration-300 font-label text-xs tracking-[0.05em] uppercase" href="#">Moods</a>
+<a class="text-stone-500 font-medium hover:text-[#80534c] transition-colors duration-300 font-label text-xs tracking-[0.05em] uppercase" href="#">Occasions</a>
+<a class="text-stone-500 font-medium hover:text-[#80534c] transition-colors duration-300 font-label text-xs tracking-[0.05em] uppercase" href="#">About</a>
+</nav>
+<div class="flex items-center gap-5">
+<button class="scale-95 transition-transform duration-200 ease-out text-[#80534c]">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="scale-95 transition-transform duration-200 ease-out text-[#80534c]">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button class="scale-95 transition-transform duration-200 ease-out text-[#80534c]">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32">
+<!-- Hero Section -->
+<section class="relative px-6 max-w-7xl mx-auto mb-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<div class="md:col-span-5 z-10">
+<h1 class="font-headline text-6xl md:text-8xl leading-tight tracking-tight mb-8">
+                        The <span class="italic font-normal">Soul</span> of the Hand.
+                    </h1>
+<p class="text-lg text-on-surface-variant max-w-sm mb-10 leading-relaxed">
+                        Handcrafted crystal jewelry and artisanal crochet threads, woven together for moments of mindful elegance.
+                    </p>
+<button class="bg-primary text-on-primary rounded-full px-10 py-4 font-label tracking-widest uppercase text-xs shadow-[0px_12px_32px_rgba(128,83,76,0.2)] signature-gradient transition-all duration-300 flex items-center gap-3">
+                        Shop the Collection
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="md:col-span-7 relative h-[600px] rounded-lg overflow-hidden shadow-2xl">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="close-up of a hand adorned with a delicate rose quartz bracelet holding a cream-colored handmade crochet bag with satin accents and dried flowers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyUx5w54Ch92XQHEyPxbxX78UMUqyq5tujpnIVZ0q_XcEnFDH6hFJCQZsajmUh_eRjkNhSZnJj0YCfI4mIPMZjhgqy0_miJBoAAZtneyjLu8O3PxTWwFV92FX22dxft-VtVRG0Yh0x31W_qOkS-5E6fg7hzJcy_1mJ_36H71nCtagfbC7jxFXAV1Jql1_MxPF4AfFGM8fKCV-DFtcoasUzmGSc8u3HGjzprCml71CvHQ9YN890gAM-mLTF75ZbNdXKiHMDeJcm0sHn"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent"></div>
+</div>
+</div>
+<!-- Asymmetric Floating Accent -->
+<div class="hidden md:block absolute -bottom-12 right-1/3 bg-secondary-container p-12 rounded-full w-64 h-64 -z-10 blur-3xl opacity-30"></div>
+</section>
+<!-- New Arrivals: Bento Grid -->
+<section class="max-w-7xl mx-auto px-6 mb-32">
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="font-label text-xs tracking-[0.1em] uppercase text-primary mb-2 block">New Arrivals</span>
+<h2 class="font-headline text-4xl">Latest Creations</h2>
+</div>
+<a class="text-primary font-medium underline underline-offset-8 decoration-primary-fixed-dim" href="#">Explore All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-low rounded-lg p-8 group overflow-hidden">
+<div class="h-[400px] mb-6 rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="editorial shot of multiple crystal necklaces layered on a linen fabric background with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACAFUgedjwo0gcTq5vpC1_P3x6hrh-ApV5jBJ3ioaiGMU6DoXOAPFhWaMf6FpOM48x4t73TohHiutBcKF4oZejgwKlpKGO-mOdFEtHHLhwUidzXFWuY1MdYrNCbNurm9vsUiBLJkT5nEkZXuXs7IEzxz6bPc5xAjCJ7oMk39LRfoK6OqShyxIwPUaDrHGqth0fMH-oe53T-s99nqgQmlzGMUO6vW0BsUG1lXid7v8fhMnRJUGu4ldGHFxnL5WXvscM9rl3KyReOjRO"/>
+</div>
+<h3 class="font-headline text-2xl mb-2">Aura Crystal Collection</h3>
+<p class="text-on-surface-variant mb-4">Cleansed with sage, charged with intention.</p>
+<span class="text-primary font-bold">$124.00</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-6 group">
+<div class="aspect-square mb-4 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="detailed close-up of an intricate emerald green crochet clutch with gold-tone hardware" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQA-RkrCshufOdm3DPnIw_6rNFX9kmBm4XkL0YwVu_FwPp3bQUikq44FwYcM_d3fVInX1VQnYSRZWl5F2RjMOTbi76by31wzvsloyiXgwXb4vSV6ZIUs4_1tQedhIFY--ahM9ez-FX5QVeMQMWxtlYpIKy-y36b2gI2o9uDfPMid2TFNXYrIoiZ89IdKgKhzyj3weNGuKepKT94u_Bp_zk7SFvNvKQEJ2G1fxdl34bYYSBPmlVxrni8SZJXYg3uUizblotKb6Woqqq"/>
+</div>
+<h4 class="font-medium text-lg">Emerald Knot Clutch</h4>
+<span class="text-stone-500">$85.00</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-6 group">
+<div class="aspect-square mb-4 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="soft focus photo of amethyst geode earrings resting on a white silk ribbon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNk884Q-3zBYg5wqauewoMEwPRC7L8M6sUoupIznRNC4KmnRA6kseZ3bXGNvaSlM_yrq8Z1B_gazAzfiRa1T7NNXaLT0GUQEM5N8cqq9PnOGGZQjR_l4N9f1ctCdLjmgBUPYg1ZqMBSDbsAElxTqArimAFM3k3YWXnAQRanboe54hnZ3hSnHhzF9dP3LK2YmAA7qUaJ5-AutFg0RvJvovmcKNqKgXt42Uuv9L2Ujwl9z2t48JyKCiY6oQZeVof40QgHLr7UPaaYf0F"/>
+</div>
+<h4 class="font-medium text-lg">Intuition Studs</h4>
+<span class="text-stone-500">$45.00</span>
+</div>
+<div class="md:col-span-2 bg-secondary-container/30 rounded-lg p-8 flex items-center gap-8 relative overflow-hidden">
+<div class="crochet-overlay absolute inset-0"></div>
+<div class="relative z-10 max-w-xs">
+<h3 class="font-headline text-3xl mb-4">Artisan Woven Totes</h3>
+<p class="text-sm text-on-secondary-container mb-6">Sustainable fibers hand-knotted by our community of makers.</p>
+<button class="bg-white text-on-background rounded-full px-6 py-2 font-label text-[10px] tracking-widest uppercase">View Series</button>
+</div>
+<div class="relative z-10 h-full">
+<img class="h-48 w-48 object-cover rounded-full shadow-lg" data-alt="large textured beige crochet tote bag hanging from a wooden chair in a sunlit room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBieBPcDUr6DHw45W2OwCJl_fPVbZ7jXKuzjeZsuRXTtwVWdVIo23Ut5NUvnQJMff0cBJF56Rg5aWv6pbOpZlE_rA4TZ7SF_eslFlsqb8UL18GgPbPnSmsUxgvtpSbwrcM3hKN0WM7Aaui2CvjRdHHJ_J05W2ZX-5kgDV3pdcNR6zDJ_J14Csd2dPZ2H7g8D9YHQjp858Tdiqdd6PwTqqDBrqkrxDQpW90-GPozy42F4ck0tFQF1-fHZFcRJ4sfQO3TjvPN1B46U_VQ"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Shop by Mood -->
+<section class="bg-surface-container-low py-24 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-headline text-5xl mb-4">Shop by Mood</h2>
+<p class="text-stone-500 max-w-lg mx-auto">Select the energy you wish to cultivate today.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="group cursor-pointer">
+<div class="relative h-96 rounded-full overflow-hidden mb-6 mx-auto w-full md:w-80 shadow-xl border-8 border-surface transition-transform duration-500 group-hover:-translate-y-4">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="peaceful morning scene with soft sunlight through a window and light blue textiles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOOQti-2BqjKUN0NmCtBv35JqEWHRuFo_TtkEzA36l2x2_zXQ8XOgJYJIubXIomT6cT-ZQQu8Y6StmZelakrdiPZL88Qlgad_ch6v9NAWLj-X0c8IpJKIdFE2EhAqRJWqrEPr4UuDyVv4LIy3IfKq4CfBmbGq-3R-4UeqpOJ7l4Oly0iZFRQm0dB_7XRMGutM_-7RYSIxhHPypVjTHVImyVkADSAcaduCJcvGUx6Z1ipTEKC6KZoecg6Wka_imUqXQodnqVXalOx5H"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-transparent transition-all">
+<span class="font-headline text-4xl text-white">Calm</span>
+</div>
+</div>
+<p class="text-center text-sm font-label tracking-widest uppercase text-primary opacity-0 group-hover:opacity-100 transition-opacity">Soft Silks &amp; Blue Lace Agate</p>
+</div>
+<div class="group cursor-pointer">
+<div class="relative h-96 rounded-full overflow-hidden mb-6 mx-auto w-full md:w-80 shadow-xl border-8 border-surface transition-transform duration-500 group-hover:-translate-y-4">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="vibrant sunset colors and sparkling golden textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9sVp7GXBSHFPggDHYo91kLtOSZvcmkZ52H2-_NpLjj-OIU6G46TFGQORUIsPB5CAmInau0rojCEjPIozCRmaIamYCR3-ydzj_TGXJDOwkFfsXimT1DFJzmEd3lUu6lR7LxyK7-vDmYIDtnOiXDdsTuvDXMxuGJjUSlI1eIl0jNAIAlhdL8vEzpOvPuv2BoKLfHS5x-q1HGUgcf8DZ5inSRAASHSnaYR2mpp0qFe2H7HUnvPZ62ImsdRuTACcYwhrZ4cvr7FHPaQvj"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-transparent transition-all">
+<span class="font-headline text-4xl text-white">Energetic</span>
+</div>
+</div>
+<p class="text-center text-sm font-label tracking-widest uppercase text-primary opacity-0 group-hover:opacity-100 transition-opacity">Citrine &amp; Bold Weaves</p>
+</div>
+<div class="group cursor-pointer">
+<div class="relative h-96 rounded-full overflow-hidden mb-6 mx-auto w-full md:w-80 shadow-xl border-8 border-surface transition-transform duration-500 group-hover:-translate-y-4">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="tender scene with soft pink petals and warm candle light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdJSZ8NSnYpzDmc898AsdfDZ_m4eQIoaFnXHys5TL1CYjmIO9nASnQq-IlScLwkjHK2s5Q0ef1R0VS0Hl1SDVDqStRickl6u3b1_x8tK2I-S0r231PgU-OEaPTs2ia24CKV4cBEdU36x9Zkq4W-ygW0yYaRY4nD9oocF5qQUAhZ6GojzcRKuBNrdsvRv8kriNwVAx1tSMVPF3UBrekYZ0qarsOoOUrrwK8co6Gq8NCcwOmSdGUzAghDWU8r1UAUor4i_2NJ9yi6XM2"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-transparent transition-all">
+<span class="font-headline text-4xl text-white">Romantic</span>
+</div>
+</div>
+<p class="text-center text-sm font-label tracking-widest uppercase text-primary opacity-0 group-hover:opacity-100 transition-opacity">Rose Quartz &amp; Satin Ties</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Shop by Occasion -->
+<section class="max-w-7xl mx-auto px-6 py-32">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1 relative">
+<div class="aspect-[4/5] bg-surface-container-high rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="a minimalist wedding dress hanging next to a pair of handmade crystal earrings and a white crochet bag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1Ybychg2ZiQcKkmSiVVex2vLNiIw899c_y6YA5C6t06Oq8lFLcB5bQtWoqjX_z7gh7NBnSoB-SRs_TPdnyULDL6aVI2eDFdWE_b0rE0SaQxaRQK53a1NcV4TVFkCwvy40Z7BcYdKR4eZw9uDqFgqPgczyO2uIoZjCMlfvT2MXSX74f9kFTTK6fZNTHFoPRRt4NkQGkXhXA1GDLzj8ERMA7LsJ7FjI2Pu0MZ5fK66nTIl0CRrccTpXPLDMQuIgXMSWmqB-kvhEARBU"/>
+</div>
+<div class="absolute -bottom-10 -right-10 w-64 h-80 bg-surface-container-lowest shadow-2xl p-4 rounded-lg hidden md:block">
+<img class="w-full h-full object-cover rounded-lg" data-alt="detail shot of a wedding ring resting on a small crochet cushion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLRH1kmFTUfjouozvifEwlqv6qVQ5cw2ikRpmfYLGTSyBsG2AJtfe1v2wy8EuAoH6_xa7oxusaEfqi7aUorcXVXOG7n1-sFoH_SpZ_cb40Zjhnjfi2ZYzE03et0BY4kGSfBqIw6wTSpdTBI3JQkzQZeHO7POl_j2zLfXdMorqEq4Fz8RXqPX9GcskhjL0-vZd4DtJDOhv53QKCSi75KVw5eooHlbybWHSdTS3FqSmxfmEKs6BhUJ6-aodtXDT_eBdiHwPRLqvU_WvD"/>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="font-label text-xs tracking-[0.1em] uppercase text-primary mb-4 block">Curated Collections</span>
+<h2 class="font-headline text-5xl mb-12 leading-tight">Moments worth <span class="italic">Treasuring</span>.</h2>
+<div class="space-y-8">
+<div class="flex items-center group cursor-pointer border-b border-outline-variant/20 pb-6">
+<span class="font-headline text-4xl text-stone-300 mr-8 group-hover:text-primary transition-colors">01</span>
+<div class="flex-grow">
+<h4 class="text-xl font-medium">Wedding</h4>
+<p class="text-sm text-stone-500">The Modern Bride &amp; Bridal Party</p>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-all" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center group cursor-pointer border-b border-outline-variant/20 pb-6">
+<span class="font-headline text-4xl text-stone-300 mr-8 group-hover:text-primary transition-colors">02</span>
+<div class="flex-grow">
+<h4 class="text-xl font-medium">Casual</h4>
+<p class="text-sm text-stone-500">Elevated Everyday Essentials</p>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-all" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center group cursor-pointer border-b border-outline-variant/20 pb-6">
+<span class="font-headline text-4xl text-stone-300 mr-8 group-hover:text-primary transition-colors">03</span>
+<div class="flex-grow">
+<h4 class="text-xl font-medium">Gifting</h4>
+<p class="text-sm text-stone-500">Intention-Set Gifts for Loved Ones</p>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-all" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Instagram Feed -->
+<section class="max-w-7xl mx-auto px-6 mb-32">
+<div class="text-center mb-12">
+<span class="font-label text-xs tracking-[0.1em] uppercase text-primary mb-2 block">Community</span>
+<h2 class="font-headline text-3xl">@GemAndThreads</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-6 gap-2">
+<div class="aspect-square bg-surface-container overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="lifestyle shot of a customer wearing jewelry in a cozy coffee shop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2Wq0c_ruU5Gnv-njD9uYhpiVZuOgYNuUGK4sNNdxm5GTYeZNe2OxhA7MkSRElhiuO2ry95ahHHQagaDVUleEIalFf_sHTxvckLo_EA3PgydREVzZChPFZ_GloUqkUPWUzm0G4BVXNGiR44aCW94Wln3LyFXrPNJ4bI7ei_kcKRb56Ut4oKCQQY1mBFq-P78RRK2iu_wdvy4kxiIr2LVQZ0JHh_VQ3PDFXbF1ql98oVnYnPAGt-UCBeoYVtn_jyFXS75kAn6t8e3DA"/>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="close up of jewelry being packaged in a beautiful sustainable box" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmoFDH--FOVjQVpze63SWIzitmZ8W86eFHwhEKvfG51_G68_WjyKG1qgwaLyzgTpdputUg2aC2iJEfFJq_9R-p1ajOOSs9IUKZ2BwNWp91AKg0XxWrP4_aGFvbs8MA-zLxXLoi519oIam10vGfa6RtEb4hbcRhFHHBw9WNb1EWSFxgOJ_EBBSaqNQATX_KRDYISbXHpzJulf_CrUAzw5QfkLpK20wclELcWNhYOZHfZIjd5tqnyMwuXl7hNTdl5iQzWvqqp6eqHc36"/>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="flat lay of artisan tools, crystals, and threads" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEzxF96SDLYDxA_KOQ4WM33gModCa1mtwZbIgxNVtU9ZV3bgUQj_1Us-748QIvggku7UkAq3eaeB92_H9YJPm3bd4iag-tH97LpboDOML_Ml72alDten4UaDXIgtzGOz3_9KrNqHS7YAPHXVSX-g8gsPDyifBLM7iexlQmU-YGoxCerG4q3q72n5_6sCHMuj2gPSjaoXTP0HDPrfgg50rmiSOAMeQdneIKOTMZE_M8MnxKB1l_MW30Uo7cpeHL19QKh1N_fE6gacQa"/>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="a person crocheting a colorful bag in a sunlit garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6m7ASLySAlVVJNmlXLW_1PdxKy1bLh2N6kvau8qaY5N-QvTLIZRe0XhhHWzjnv5UP8deCPnE_J0Hbrs_D_lQOIuixcoYpQ5VvoFAHl1CZSlcA06MjjHDM76F1nsIS-POJOHvcrPJYrj-eKhBvUs7cBvLC6QqUmBWMSoz7QWYUjjS2Fd-gQG8mf5DPIQ1Ci8MGzEvwRk8uTuXcEro0PkGsfzHZPjV8IFe4IPgbWMwqLgO-sul3KZlbvkwtNxaJuSYlAHod66Vhymat"/>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="aesthetic shot of incense smoke swirling over jewelry" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgBkUGzU9k4J4Kkp2ICWPM_cVYF3FQmRCCe1XyQRxkAe87xk-eqhTBO4ZHmrHQnOqis50ctUuxPlQAX9cCwTZAuWBTklEOeKAcmXImeXV8HdOZxGZfThs0QAjo4y_1_Opqb8FHW7UrBnfKJdoRGGScACeV7J7LTFmy1EWUPLBRizsIVpEloU0by4kkQAMq9xylLcxz1e4AicpL2aPs9B1T76goq6HoA606kAaynVxeAlXCpnAtW8JeEg1gjnZJ1tRDzOgpWiSSmbc0"/>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="outfit of the day featuring artisan crochet accessories" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNgFSEB66ls3renzNR1TA2hT2g0vpszfaicvp4MZUqvyjaIHZsIvMxYoFfJ7fcREpjUdw8ON0FgZf3UzRygcbgS-osa9PCmxbyPb5SKlGLYLEzpKGVFV4ZLHEM9Hl2_Mj3nLO-_CfbxmG11lp_gOvwxuSJZchBt8jDhLe2Y6LEn9vns-rMPwshVXJtXOqv8iKEbbxCf-3bRhZ3WMrFBwFw5sdy4efCPVSiJ21XSKrX0wAk1fYAwj7viFhd1wZJD6EMo5YcQs98b5cM"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full flex flex-col items-center gap-8 text-center bg-stone-50 py-16 px-8">
+<div class="font-serif text-3xl italic text-stone-800">Gem &amp; Threads</div>
+<div class="flex flex-wrap justify-center gap-12 max-w-4xl border-t border-b border-outline-variant/10 py-12">
+<div class="flex flex-col gap-4">
+<span class="font-label text-[10px] tracking-widest uppercase text-primary font-bold">About</span>
+<a class="text-stone-600 hover:underline decoration-[#f3b8b0] underline-offset-4 font-body text-sm" href="#">Artisan Story</a>
+<a class="text-stone-600 hover:underline decoration-[#f3b8b0] underline-offset-4 font-body text-sm" href="#">Sustainability</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label text-[10px] tracking-widest uppercase text-primary font-bold">Support</span>
+<a class="text-stone-600 hover:underline decoration-[#f3b8b0] underline-offset-4 font-body text-sm" href="#">Care Guide</a>
+<a class="text-stone-600 hover:underline decoration-[#f3b8b0] underline-offset-4 font-body text-sm" href="#">Shipping</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label text-[10px] tracking-widest uppercase text-primary font-bold">Connect</span>
+<a class="text-stone-600 hover:underline decoration-[#f3b8b0] underline-offset-4 font-body text-sm" href="#">Instagram</a>
+<a class="text-stone-600 hover:underline decoration-[#f3b8b0] underline-offset-4 font-body text-sm" href="#">Journal</a>
+</div>
+</div>
+<p class="text-stone-400 text-xs tracking-wide">© 2024 Gem &amp; Threads. Handcrafted with intention.</p>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-white/80 backdrop-blur-2xl rounded-t-[32px]">
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#80534c] to-[#e2a9a1] text-white rounded-full p-3 scale-90 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 p-3 hover:bg-stone-100 rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="crystal_ball">glass_cup</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 p-3 hover:bg-stone-100 rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="crochet">blanket</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 p-3 hover:bg-stone-100 rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_basket">shopping_basket</span>
+</a>
+</nav>
+</body></html>
